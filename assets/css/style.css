@@ -47,43 +47,88 @@ p{
 .wrapper{
 	margin: 0 30px 0 30px;
 }
-.navbar{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 66px;
+
+.navbar {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
 }
-.navbar__link-brand{
-	font-size: 24px;
+.navbar-logo{
+	margin-top: 20px;
+  color: #000;
+  font-size: 24px;
+}
+.navbar__link {
+  padding-right: 8px;
+}
+
+.navbar__Items {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
 }
 .navbar__Items ul{
 	list-style: none;
-	margin-left: -100px;
 }
 .navbar__Items ul li{
 	display: inline-block;
 	margin-left: 10px;
 }
-.navbar__Items ul li:hover{
+.navbar__Items ul li a:hover{
 	border-bottom: 2px solid #FB770D;
 }
-
-@media only screen and (max-width: 680px){
-	.navbar{
-		flex-direction: column;
-		justify-content: unset;
-		
-	}
-	.navbar__Items ul{
-		list-style: none;
-		margin-left: unset;
-	}
-	.navbar__Items ul li{
-		display: block;
-		margin-left: 10px;
-	}
+.navbar__Items--right {
+  margin-left:auto;
 }
 
+.navbar__link-toggle {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+  background-color: #1a1a1a;
+  }
+  .navbar-logo{
+  color: #fff;
+}
+  .navbar__Items,
+  .navbar {
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: 0.3s;
+  }
+    
+	.navbar__Items {
+    display:none;
+    margin-left: 0;
+  }
+  .navbar__Items li{
+  display: block;
+	} 
+	.navbar__Items--right {
+    margin-left:0;
+  }
+  .navbar__Items--right .join-btn{
+  	margin-top: 40px;
+  }
+    
+	.navbar__ToggleShow {
+    display: flex;
+    height: auto;
+    padding-bottom: 20px;
+    transition: 0.3s;
+  }
+    
+	.navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #000;
+    font-size: 24px;
+  } 
+}
 
 
 
@@ -93,6 +138,7 @@ p{
 	flex-direction: row;
 	width: 100%;
 	align-items: center;
+	margin-top: 30px;
 }
 .text-description{
 	width: 40%;
@@ -109,4 +155,60 @@ p{
 .img-description img{
 	width: 100%;
 	height: auto;
+}
+
+@media only screen and (max-width: 880px){
+	.hero-section{
+	flex-direction: column;
+}
+.text-description{
+	text-align: center;
+	width: 100%;
+}
+.text-description h1, p{
+	margin-bottom: 15px;
+}
+.text-description .btn{
+	margin-top: 15px;
+}
+.img-description{
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+.img-description img{
+	width: 90%;
+	height: auto;
+}
+
+}
+
+
+.details-section{
+	margin: 50px 0 30px 0;
+
+}
+
+.details-section h2{
+	text-align: center;
+}
+.details-section__container{
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 10px;
+	padding: 10px;
+}
+.details-section_icon{
+	width: 60px;
+	height: auto;
+	margin-bottom: 12px;
+}
+.details-section__container h4{
+	margin-bottom: 4px;
+}
+@media only screen and (max-width: 1000px){
+	.details-section__item{
+		margin-bottom: 24px;
+	}
 }
