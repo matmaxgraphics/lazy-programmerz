@@ -11,19 +11,19 @@
 	font-weight: 400;
 }
 @font-face{
-	font-family: 'metropolis-Medium';
+	font-family: 'metropolis';
 	src:url(assets/font/Metropolis-Medium.ttf);
 	font-style: normal;
 	font-weight: 500;
 }
 @font-face{
-	font-family: 'metropolis-SemiBold';
+	font-family: 'metropolis';
 	src:url(assets/font/Metropolis-SemiBold.ttf);
 	font-style: normal;
 	font-weight: 700;
 }
 @font-face{
-	font-family: 'metropolis-Bold';
+	font-family: 'metropolis';
 	src:url(assets/font/Metropolis-Bold.ttf);
 	font-style: normal;
 	font-weight: 800;
@@ -38,31 +38,24 @@ a{
 }
 h1{
 	font-size: clamp(2em, 3em, 3.5em);
-	font-family: 'metropolis-Bold';
 }
 h2{
 	font-size: clamp(1.75em, 4vw, 2.5em);
-	font-family: 'metropolis-Bold';
 }
 h3{
 	font-size: clamp(1.5em, 5vw, 1.75em);
-	font-family: 'metropolis-Bold';
 }
 h4{
 	font-size: clamp(1.2em, 6vw, 1.5em);
-	font-family: 'metropolis-Bold';
 }
 p{
 	font-size: 1em;
 	line-height: 1.3;
-	font-family: 'metropolis';
 }
 .secondary-text{
 	font-size: 1.125em;
-	font-family: 'metropolis';
 }
 .btn{
-	font-family: 'metropolis';
 	background-color: #FB770D;
 	padding: 15px;
 	color: #fff;
@@ -310,3 +303,80 @@ p{
 	}
 }
 /*====END OF COURSE SECTION STYLING====*/
+
+
+
+.achievement-section{
+	margin: 72px 0 0 0;
+}
+.achievement-section h2{
+	text-align: center;
+}
+.achievement-section__container{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 10px 0;
+	width: 100%;
+	margin-top: 48px;
+}
+.achievement-section__image{
+	width: 50%;
+	text-align: center;
+}
+.achievement-section img{
+	width:70%;
+	height: auto;
+}
+.achievement-section__description{
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+.achievement-container{
+	display: flex;
+	flex-flow: row wrap;
+	width: calc( 70% + 3vw);
+
+}
+.achievement-section__description .text-group{
+	margin: 0 20% 5% 0;
+	color: #25424C;
+}
+.achievement-section__description h2{
+/*	margin-bottom: 18px;
+*/}
+.achievement-section__description p{
+	width: 100px;
+	line-height: 1.2;
+}
+@media only screen and (max-width: 600px){
+	.achievement-section__container{
+		flex-direction: column;
+		margin-top: 20px;
+	}
+	.achievement-section__image{
+		width: 100%;
+	}
+	.achievement-section img{
+		width:90%;
+		height: auto;
+	}
+	.achievement-section__description{
+		width: 100%;
+		align-items: center;
+	}
+	.achievement-container{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-top: 36px;
+		text-align: center;
+
+	}
+	.achievement-section__description .text-group{
+		margin: 0 20px 5px 0;
+	}
+}
