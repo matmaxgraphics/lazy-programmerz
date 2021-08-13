@@ -134,9 +134,9 @@ p{
   	flex-direction: column;
   }
   .navbar__Items li{
-  display: block;
-  color: #fff;
-  margin-bottom: 24px;
+	  display: block;
+	  color: #fff;
+	  margin-bottom: 24px;
 	} 
 	.navbar__Items--right {
     margin-left:0;
